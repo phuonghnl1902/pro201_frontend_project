@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Welcome to Calligraphy</title>
+	<style>
+		body {
+			background: url(Pic/03663_HD.jpg);
+			background-size: cover;
+			animation-name: first;
+    		animation-duration: 40s;
+			animation-iteration-count: infinite;
+			overflow-x: hidden;
+			transition: 1s;
+		}
+		
+		#title {
+			width: 100%;
+			height: auto;
+			font-family: "#9Slide05 Agile Script Calligra";
+			font-size: 12em;
+			display: inline-block;
+			box-sizing: border-box;
+			text-align: center;
+			float: left;
+			line-height: auto;
+			margin-left: 0px;
+		}
+		#p1 {
+			width: 100%;
+			height: auto;
+			font-family: "Arial";
+			box-sizing: border-box;
+			display: inline-block;
+			margin: 0px;
+			text-align: center;
+			float: left;
+			font-size: 1em;
+			letter-spacing: 10px;
+			position: relative;
+			top: -100px;
+			margin-left: 0px;
+			
+		}
+		ul#menu {
+			width: 50%;
+			height: 30px;
+			list-style-type: none;
+			box-sizing: border-box;
+			display: inline-block;
+			position: absolute;
+			right:0px;
+			
+		}
+		ul#menu > li {
+			list-style-type: none;
+			width: 25%;
+			height: 30px;
+			box-sizing: border-box;
+			text-align: center;
+			font-size: 1em;
+			font-family: "Arial";
+			float: left;
+			line-height: 30px;
+			font-weight: bold;
+			color: black;
+			display: inline-block;
+			letter-spacing: 3px;
+			border-right: 1px solid black;
+		}
+		ul#menu > li:last-child {
+			border-right: 0px;
+		}
+		
+		a:link {
+			text-decoration: none;
+			color: black;
+		}
+		a:hover {
+			font-weight: bold;
+			color: #EEC900;
+			text-decoration: underline;
+		}
+		a:active {
+			color: white;
+		}
+		a:visited {
+			color: black;
+			text-decoration: underline;
+		}
+		
+		/* Standard syntax */
+		@keyframes first {
+    		0%   {
+				background: url(Pic/03663_HD.jpg);
+				background-size: cover;
+			}
+			25%  {
+				background: url(Pic/06367_HD.jpg);
+				background-size: cover;
+			}
+			50% {
+				background: url(Pic/vintage-flowers-backgrounds.jpg);
+				background-size: cover;
+			}
+			75% {
+				background: url(Pic/221539787-vintage-nature-wallpapers.jpg);
+				background-size: cover;
+			}
+			100% {
+				background: url(Pic/03663_HD.jpg);
+				background-size: cover;
+			}
+		}
+	</style>
+	<script>
+		var i = 0;
+		var speed = 200;
+		var txt = 'Calligraphy';
+		function typeWriter() {
+  			if (i < txt.length) {
+    			document.getElementById("title").innerHTML += txt.charAt(i);
+    			i++;
+    			setTimeout(typeWriter, speed);
+  			}
+		}
+	</script>
+</head>
+
+<body onLoad="typeWriter()">
+	<div>
+		<ul id="menu">
+			<li><a href="Home.html" target="_top">HOME</a></li>
+			<li><a href="About.html" target="_top">ABOUT</a></li>
+			<li><a href="ShowRoom.html" target="_top">SHOWROOM</a></li>
+			<li><a href="Contact.html" target="_top">CONTACT</a></li>
+		</ul>
+	</div>
+	<h1 id="title"></h1>
+	<p id="p1">CALLIGRAPHY, HAND LETTERING & DESIGN</p>
+	
+</body>
+</html>
